@@ -1,0 +1,30 @@
+section {
+    background-color: #F8F8F8;
+    
+
+    .hr-line {
+        background-color: #E5E5E5;
+        height: 2px;
+    }
+
+    .main {
+        .img-cont img {
+            // width: 100%;
+            border-radius: 50%;
+        }
+
+        .content {
+            top: -80px;
+            padding-top: 100px !important;
+            padding-bottom: 70px !important;
+
+            label {
+                color: #6C6C6C;
+            }
+            input {
+                background-color: #F8F8F8;
+                border: 1px solid #E5E5E5;
+            }
+        }
+    }
+}

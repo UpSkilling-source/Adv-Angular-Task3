@@ -1,0 +1,37 @@
+section {
+    background-color: #f8f8f8;
+    height: 100%;
+
+    .title {
+        button  {
+            background-color: #FEAF00;
+        }
+    }
+
+    .hr-line {
+        background-color: #E5E5E5;
+        height: 2px;
+    }
+
+    .img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .th-st {
+        color: #ACACAC;
+    }
+
+    .icon-action {
+        color: #FEAF00;
+        margin: 0 10px;
+        padding: 3px;
+    }
+
+    .del-btn:hover mat-icon {
+        color: #db398a;
+        transform: scale(1.6);
+        transition: all 300ms linear;
+    }
+}
+

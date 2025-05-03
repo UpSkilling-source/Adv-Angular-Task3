@@ -1,0 +1,83 @@
+<section class="px-5 py-3">
+    <h3>{{ title }}</h3>
+    <div class="hr-line"></div>
+    <div class="main">
+        <div class="img-cont position-relative z-3">
+            <img 
+                [src]="userProfileData?.image" 
+                alt="profile" 
+                class="position-relative start-50 translate-middle-x shadow p-0"
+            >
+        </div>
+        <form [formGroup]="profileForm" class="content rounded rounded-4 shadow bg-white py-5 px-5 position-relative z-2">
+            <div class="row gx-5 gy-4">
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>First Name</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.firstName" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="fname"
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Last Name</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.lastName" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="lname"
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Email</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.email" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="email"
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Age</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.age" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="age"
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Phone Number</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.phone" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="phone"
+                        >
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column">
+                        <label>Birth Date</label>
+                        <input 
+                            type="text" 
+                            [value]="userProfileData?.birthDate" 
+                            class="mt-2 px-3 py-2 rounded"
+                            formControlName="birthdate"
+                        >
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

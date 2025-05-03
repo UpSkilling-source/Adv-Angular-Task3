@@ -1,0 +1,14 @@
+<section class="bg-white d-flex justify-content-end px-5">
+    <div 
+        class="mx-5 rounded border px-2 py-1 d-flex align-items-center justify-content-between"
+    >
+        <input 
+            type="text" placeholder="search ..." 
+            class="border-0" 
+            [(ngModel)]="query"
+            (ngModelChange)="search()"
+        >
+        <mat-icon class="nav-color">search</mat-icon>
+    </div>
+    <mat-icon class="nav-color">notifications</mat-icon>
+</section>

@@ -1,0 +1,48 @@
+<section class="position-relative">
+    <div class="content ">
+        <h5 class="ms-3">UMS</h5>
+        <div class="mt-3 ">
+            <div class="d-flex justify-content-center">
+                <img [src]="userData?.image" alt="" class="w-50">
+            </div>
+            <h4 class="mt-4">
+                {{ (userData?.firstName || "Guest") + " " + (userData?.lastName || "") }}
+            </h4>
+            <ul class="mt-4 list-unstyled m-0 p-0 d-flex align-items-center flex-column align-items-start">
+                <li class="text-center my-0 py-2 rounded w-75"
+                    *ngFor="let li of [
+                        {name: 'Home', route: 'users', icon: 'fa-solid fa-house'}, 
+                        {name: 'Users', route: 'users/users-list', icon: 'fa-solid fa-bookmark'}, 
+                        {name: 'Add User', route: 'users/add', icon: 'fa-solid fa-graduation-cap'}, 
+                        {name: 'Profile', route: 'users/profile', icon: 'fa-solid fa-address-card'}
+                    ]; let i = index"
+                >
+                    <a  
+                        class="text-decoration-none text-black w-100 d-inline-block"
+                        [routerLink]="i === 0 ? null : li.route"
+                        routerLinkActive="activeLink"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                        <span class="d-inline-block w-50 text-nowrap text-start">
+                            <span class="d-inline-block me-0" style="width: 30px;"><i [class]="li.icon"></i></span>
+                            <span>{{ li.name }}</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="position-absolute bottom-0 mb-5 rounded logout">
+                    <a  
+                        class="text-decoration-none text-black w-100 d-inline-block rounded px-5 py-2"
+                        routerLink="/login"
+                        (click)="logout()"
+                    >
+                        <span class="d-flex align-items-center">
+                            <span class="d-inline-block me-3">Logout</span>
+                            <mat-icon>logout</mat-icon>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
